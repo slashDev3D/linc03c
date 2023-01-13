@@ -1,0 +1,50 @@
+.footer--notice{display: flex;align-items: center;}
+.footer--newsletter{width: 90px;font-size: 13px;font-weight: 600;}
+.footer--noticeSwiper{width: calc(100% - 180px);}
+.footer--noticeSwiper .swiper-slide{display: flex;align-items: center;padding: 10px 20px;background-color: #fff;}
+.footer--noticeSwiper .swiper-slide div{display: flex;align-items: center;}
+
+.noticeSwiper--notice{font-size: 14px;font-weight: 600;}
+.noticeSwiper--title{font-size: 16px;font-weight: 600;}
+.noticeSwiper--button{display: flex;}
+.noticeSwiper--button .material-symbols-outlined{font-size: 20px;}
+.noticeSwiper--prev,
+.noticeSwiper--next{width: 20px;height: 20px;display: flex;align-items: center;justify-content: center;text-align: center;cursor: pointer;}
+.noticeSwiper--prev{transform: rotate(90deg);}
+.noticeSwiper--next{transform: rotate(-90deg);}
+
+.swiper-button-disabled.noticeSwiper--prev,
+.swiper-button-disabled.noticeSwiper--next{cursor: default;}
+
+.footer--contents{background-color: #eff0f5;padding: 40px 0;}
+.footer--row{display: flex;justify-content: space-between;align-items: center;}
+.footer--row:first-child{padding-bottom: 16px;border-bottom: 1px solid #ddd;}
+.footer--row:nth-child(2){padding-top: 32px;align-items: flex-end;}
+.footer--row:nth-child(3){padding-top: 32px;align-items: flex-end;}
+.footer--logo{font-size: 18px;font-weight: 800;}
+.footer--sns{display: flex;align-items: center;}
+.footer--sns a{display: flex;align-items: center;padding: 4px;}
+.footer--sns a:not(:last-child){margin-right: 10px;}
+
+.footer--text01{font-size: 15px;font-weight: 600;margin-bottom: 1em;cursor: pointer;}
+.footer--text02{font-size: 13px;color: #666;}
+.footer--company{display: flex;align-items: center;}
+.footer--companyItem:not(:first-child){margin-left: 24px;}
+@media all and (max-width:768px){
+    .footer--text02{font-size: 12px;}
+    .footer--row:first-child{flex-direction: column;}
+    .footer--logo{margin-bottom: 14px;}
+    .footer--row:last-child{flex-direction: column;justify-content: center;align-items: center;text-align: center;}
+    .footer--text{margin-bottom: 24px;}
+    .footer--company{flex-wrap: wrap;justify-content: center;}
+    .footer--companyItem{margin-bottom: 12px;}
+}
+
+/* #footer{padding-top: 400px;} */
+.footer--notice{display: none;}
+
+/* 221101 성재민 */
+.footer--row-prodInfo{display: flex;width: 50%;flex-wrap: wrap;gap: 4px 12px;font-size: 14px;}
+@media all and (max-width:768px){
+    .footer--row-prodInfo{width: 100%;text-align: center;justify-content: center;}
+}

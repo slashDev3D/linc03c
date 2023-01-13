@@ -1,0 +1,210 @@
+
+<?
+include_once('./_common.php');
+
+$_list_page = true;
+$data_sub = "show";
+$_listVideoPopup = true;
+$data_visit = "1";
+$data_sub_visit = "1";
+
+include_once(G5_PATH.'/head2.php');
+
+
+$cnt = sql_fetch("select count(wr_id) as cnt from g5_write_calender where ca_name = '똑똑 위클리' and wr_3 != '' and wr_id = wr_parent ");
+$total_cnt = $cnt["cnt"];
+
+?>
+
+
+<div class="list-contents">
+    <div class="public--wrap">
+        <div class="public--where">
+            <div class="public--where-before">
+                <a href="/">Home<span class="material-symbols-outlined">navigate_next</span></a>
+            </div>
+            <div class="public--where-before">
+                <a href="/chlinc3.html">채널 링크3.0<span class="material-symbols-outlined">navigate_next</span></a>
+            </div>
+            <div class="public--where-now">
+                <a href="">똑똑 위클리</a>
+            </div>
+        </div>
+    </div>
+    <div class="public--wrap">
+        <div class="list--bnr" style="background-color: #151c26;">
+            <div class="list--bnr-text">
+                <div class="list--bnr-textBox">
+                    <p class="list--bnr-text00 knock"><span>MC 서경석</span></p>
+                    <p class="list--bnr-text01">똑똑 위클리</p>
+                    <!-- 221104 SJM 텍스트 삭제 -->
+                    <!-- <p class="list--bnr-text02">#LINC3.0 사업 핵심 이슈<br>#일타 강사가 쏙쏙! 알려주는 알짜 사업 정보</p> -->
+                    <p class="list--bnr-text02">#LINC3.0 사업 핵심 이슈 <br>#링크 사업의 이야기를 모아모아 <br>#서경석이 알려주는 알짜 사업 정보</p>
+                </div>
+                <p class="list--bnr-text03">⏰&nbsp;매주 화요일 13:00<br>Youtube/홈페이지에서 만나요!</p>
+            </div>
+            <div class="list--bnr-bg list--bnr-bg-a">
+                <div class="list--bnr-bgImg">
+                    <img src="/img/linc03_bnr01_char.png" alt="">
+                    <img src="/img/linc03_bnr01_char_mobile.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="list--sort">
+            <div class="list--sort-option">
+                <!--
+                    div.list--sort-optionValue요소기 sorting 옵션값입니다.
+                    옵션값은 중복되지 않습니다.
+                    최초옵션값은 최신등록 순(첫번째 옵션값)입니다.
+                    버튼 클릭 시 페이지 이동 없이 해당 페이지 내에서 아이템 정렬을 부탁드립니다.
+                -->
+                <div class="list--sort-optionValue checked" data-sort="new">
+                    <div class="list--sort-optionState">
+                        <span class="list--sort-optionValue-off"></span>
+                        <span class="list--sort-optionValue-on material-symbols-outlined">done</span>
+                    </div>
+                    <div class="list--sort-optionName">최신등록 순</div>
+                </div>
+                <div class="list--sort-optionValue" data-sort="old">
+                    <div class="list--sort-optionState">
+                        <span class="list--sort-optionValue-off"></span>
+                        <span class="list--sort-optionValue-on material-symbols-outlined">done</span>
+                    </div>
+                    <div class="list--sort-optionName">오래된 순</div>
+                </div>
+                <div class="list--sort-optionValue" data-sort="hit"> 
+                    <div class="list--sort-optionState">
+                        <span class="list--sort-optionValue-off"></span>
+                        <span class="list--sort-optionValue-on material-symbols-outlined">done</span>
+                    </div>
+                    <div class="list--sort-optionName">조회 순</div>
+                </div>
+            </div>
+            <!-- 
+                sorting 기능 실행 후 정렬된 아이템의 개수를 
+                <b>{여기에 출력되게 부탁드립니다.}</b>
+            -->
+            <div class="list--sort-itemCount">
+                <span>총 <b><?=number_format($total_cnt)?></b>개</span>
+            </div>
+        </div>
+        <div class="list--container">
+            <div class="list--wrap">
+                <!-- 링크 컴퍼니의 영상아이템이 list--item에 담겨져 출력되게 부탁드립니다. -->
+                <!-- 해당 아이템은 최초에 최대 9개 까지 출력되고,그 후로는 div#viewMore[더보기] 버튼을 클릭하여 6개씩 순차적으로 출력되도록 부탁드립니다.-->
+                
+                <!-- 아래로 list--item 3개는 예시입니다. 삭제 후 작업 진행 부탁드립니다. -->
+            </div>
+        </div>
+    </div>
+    <!-- 아래의 #viewMore 버튼 클릭 시, 위의 아이템을 6개씩 추가로 출력 부탁드립니다. -->
+    <div class="list--viewMore"><div id="viewMore" class="list--viewMore-btn">더 보기</div></div>
+    <div class="subscribeLincBar">
+        <div class="public--wrap">
+            <div class="subscribeLincBar--wrap">
+                <div><p>채널 링크3.0의 다양한 정보를 즐겨보세요.</p><span>😃</span></div>
+                <a href="https://www.youtube.com/channel/UCLXFkJr1mEY-ZUxym7__bZw" target="blank">채널 링크3.0 구독하러가기</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+var _page = 1;
+var _total_cnt = '<?=$total_cnt?>';
+var _ca_name = '똑똑 위클리';
+var _sort = 'new';
+function list_load(reset)
+{
+    const getListXhr = $.ajax({
+        url: g5_bbs_url+"/ajax.list.php",
+        type: "POST",
+        data: {
+            "page" : _page,
+            "sort" : _sort,
+            "total_count" : _total_cnt,
+            "ca_name" : _ca_name
+        },
+        dataType: "html",
+        async: true,
+        cache: false,
+        success: function(data) {
+            
+            if(data == "")
+            {
+                alert("페이지가 없습니다.");
+            }
+
+            if(reset){
+                $(".list--wrap").html(data);
+            }
+            else{
+                $(".list--wrap").append(data);
+            }
+
+            
+
+        },
+        complete : function(data) {
+            
+        },
+        error : function(xhr, status, error) {
+            alert(error);
+        }
+    }).then(()=>{
+        listItemCount = document.querySelectorAll(".list--item").length
+        if( listItemCount >= _total_cnt ){
+            $("#viewMore").addClass("hide")
+        }else {
+            return
+        }
+    });
+}
+
+$(document).ready( function() {
+    list_load(true);
+} );
+
+$(function() {
+    $(document).on("click", ".list--itemThumb-img", function() {
+        var vi_id = $(this).data("vi_id");
+        var wr_id = $(this).data("wr_id");
+        
+        $.ajax({
+            url: g5_bbs_url+"/ajax.view_cnt.php",
+            type: "POST",
+            data: {"wr_id" : wr_id},
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function(data) {
+            }
+        })
+        
+        $("#listVideoPopup_video").attr("src", "https://www.youtube.com/embed/"+vi_id+"?enablejsapi=1&version=3&playerapiid=ytplayer");
+
+        $("#listVideoPopup").addClass('show');
+        
+    });
+    var listItemCount = document.querySelectorAll(".list--item").length
+    console.log(listItemCount)
+    $("#viewMore").click(function() {
+        _page = _page + 1;
+        list_load(false);
+    });
+
+
+    $(".list--sort-optionValue").click(function(){
+        _sort = $(this).data("sort");
+        _page = 1;
+        list_load(true);
+    });
+});
+
+</script>
+
+<?php
+include_once(G5_PATH.'/tail2.php');
+?>

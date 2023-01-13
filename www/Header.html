@@ -1,0 +1,308 @@
+<?
+$mem_img = "/img/member_thumb_basic.png";
+
+if($member["mb_img"] != "")
+{
+    $mem_img = G5_DATA_URL.'/member_image/'.$member["mb_img"];
+}
+
+?>
+<div class="header--container">
+    <div class="header--wrap">
+        <? if($is_admin) {?>
+        <div style="display: none;">admin</div>
+        <? }?>
+        <div id="headerSearchHam"><span></span><span></span><span></span></div>
+        <a href="/" class="header--logo"><img src="/img/logo01.png" alt=""></a>
+        <div class="header--right">
+            <div class="header--menu">
+                <!-- <a class="" href="/chlinc3.html"><p>채널 링크3.0<span></span></p></a> -->
+
+                <!-- <a class="" href="/performance.html"><p>성과영상<span></span></p></a> -->
+                <!-- <a class="" href="/business.html"><p>LINC3.0 사업단<span></span></p></a> -->
+                <!-- <a class="" href="/news.html"><p>소식모아보기<span></span></p></a> -->
+                <!-- <a class="" href="/event.html"><p>이벤트<span></span></p></a> -->
+                <a href="/ch-linc.php"><p>채널 링크3.0<span></span></p></a>
+                <a href="/performance.php"><p>성과영상<span></span></p></a>
+                <a href="/business.php"><p>LINC3.0 사업단<span></span></p></a>
+                <a href="/news.php"><p>소식모아보기<span></span></p></a>
+                <a class="" href="/bbs/board.php?bo_table=event"><p>이벤트<span></span></p></a>
+                <a class="" href="/bbs/board.php?bo_table=calender"><p>편성표<span></span></p></a>
+            </div>
+            <div class="header--tools">
+                <div class="header--tools-siteVisit">
+                    <img src="/img/header_icon_eye.png" alt="">
+                    <p id="g5_visit"><?=number_format($visit[4])?></p>
+                </div>
+                <a class="header--tools-review" href="https://linctv.or.kr/lincInc/linc_contents.php" target="blank">링크+ TV 다시보기</a>
+
+                <!-- 회원일 경우 #isMember 출력 -->
+                <?if($is_member){?>
+                <div id="isMember" class="header--tools-isMember">
+                    <!-- header--tools-isMember-icon 의 style:background-image는 회원이 등록한 이미지로 출력되게 부탁드립니다.(없을 시 header_ismember_basic.png 로 출력) -->
+                    <div class="header--tools-isMember-icon" style="background-image: url(<?=$mem_img?>);"></div>
+                    <span class="isMemberExpand material-symbols-outlined">expand_more</span>
+
+                    <div class="header--member-popup">
+                        <div class="header--member-popup-bg"></div>
+                        <div class="member-popup-container">
+                            <div class="member--popup-info">
+                                <div class="member--popup-info-thumb">
+                                    <!-- member--popup-info-thumbImg의 background-image 에는 회원프로필사진이 출력되게 부탁드립니다.
+                                        현재는 테스트로 member_thumb_basic.png가 배치되어 있습니다.
+                                        회원이 프로필사진을 등록하지 않은 경우, /img/member_thumb_basic.png가 기본으로 출력되게 부탁드립니다.
+                                    -->
+                                    <div class="member--popup-info-thumbImg" style="background-image: url(<?=$mem_img?>);"></div>
+                                    <a href="/bbs/mybiz.php"><span class="material-symbols-outlined">edit</span></a>
+                                </div>
+                                <div class="member--popup-info-text">
+                                    <div class="member--popup-info-type"><span><?=$member["mb_1"]?></span></div>
+                                    <div class="member--popup-info-name"><?=$member["mb_nick"]?></div>
+                                </div>
+                            </div>
+                            <a href="/member01.html" class="member--popup-goMyLink">나의 사업단 바로가기</a>
+                            <div class="member--popup-menu">
+                                <a href="/bbs/mypage.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">😊</div>
+                                    <div class="member--popup-menuLink-title">가입정보</div>
+                                </a>
+                                <a href="/bbs/mybiz.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">📚</div>
+                                    <div class="member--popup-menuLink-title">사업단 정보</div>
+                                </a>
+                                <a href="/bbs/biz_news.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">💬</div>
+                                    <div class="member--popup-menuLink-title">사업단 소식지</div>
+                                </a>
+                                <a href="/bbs/event_info.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">🥳</div>
+                                    <div class="member--popup-menuLink-title">행사안내</div>
+                                </a>
+                                <a href="/bbs/video.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">📹</div>
+                                    <div class="member--popup-menuLink-title">성과영상 업로드</div>
+                                </a>
+                                <a href="/bbs/notice.php" class="member--popup-menuLink">
+                                    <div class="member--popup-menuLink-icon">📢</div>
+                                    <div class="member--popup-menuLink-title">관리 안내 공지</div>
+                                </a>
+                            </div>
+                            <div class="member--popup-logout">
+                                <a href="/bbs/logout.php">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?}else{?>
+                <!-- 비회원일 경우 .header--tools-member 출력 -->
+                    <a class="header--tools-member" href="/bbs/login.php">로그인</a>
+                <?}?>
+
+                
+
+                <div id="headerSearchButton"><img src="/img/header_icon_search.png" alt=""></div>
+                <!-- <div id="headerSearchButtonDummy" class="beta--showToastPopup"><img src="/img/header_icon_search.png" alt=""></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="header--subWrap">
+        <div class="header--subWrap-list">
+            <div class="header--subWrap-listItem"><a href="./list01.html">똑똑 위클리</a></div>
+            <div class="header--subWrap-listItem"><a href="./list02.html">링크 컴퍼니</a></div>
+            <div class="header--subWrap-listItem"><a href="./list03.html">링크 어워드</a></div>
+        </div>
+    </div>
+    <div class="header--searchBg"></div>
+    <div class="header--searchPopup">
+        <div class="header--searchPopupWrap">
+            <div class="header--searchLogo"><img src="/img/logo01.png" alt=""></div>
+            <div class="header--search-figure">
+                <form action="/result.php">
+                    <div class="header--searchBox">
+                        <button type="submit" class="header--searchIcon"><img src="/img/header_icon_search.png" alt=""></button>
+                        <input class="header--searchInput" type="text" placeholder="검색어를 입력하세요." name="stx" value="<?=$stx?>">
+                    </div>
+                </form>
+
+                <?
+                $date_gap = date("Y-m-d", G5_SERVER_TIME - ($date_cnt * 86400));
+                $sql = " select pp_word, count(*) as cnt from {$g5['popular_table']} where pp_date between '$date_gap' and '".G5_TIME_YMD."' group by pp_word order by cnt desc, pp_word limit 0, 4 ";
+                $result = sql_query($sql);
+                ?>
+                <div class="header--search-tags">
+                    <?for ($i=0; $row=sql_fetch_array($result); $i++) {?>
+                    <a class="header--search-tagValue" href="/result.php?stx=<?=$row['pp_word']?>"><?=$row['pp_word']?></a>
+                    <?}?>
+                </div>
+            </div>
+            <div id="headerSearchClose" class="header--searchPopup-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="header--mobile-menu">
+        <div class="header--mobile-menu-bg"></div>
+        <div class="header--mobile-menu-container">
+            <div class="header--mobile-menuLogo"><img src="/img/logo01.png" alt=""></div>
+            <div class="header--mobile-menuItem header--mobile-menuItem-list">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><img src="/img/logo01.png" alt=""><p>채널 링크3.0</p></div>
+                    <div class="header--mobile-menuItem-right"><span class="material-symbols-outlined">expand_more</span></div>
+                </div>
+                <div class="header--mobile-menuItem-links">
+                    <!-- <a href="/list01.html">똑똑 위클리</a>
+                    <a href="/list02.html">링크 컴퍼니</a>
+                    <a href="/list03.html">링크 어워드</a> -->
+                    <a class="" href="/list01.html">똑똑 위클리</a>
+                    <a class="" href="/list02.html">링크 컴퍼니</a>
+                    <a class="" href="/list03.html">링크 어워드</a>
+                </div>
+            </div>
+            <!-- <a href="/performance.html" class="header--mobile-menuItem"> -->
+            <a href="/performance.php" class="header--mobile-menuItem">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><span class="material-symbols-outlined">smart_display</span><p>성과영상</p></div>
+                    <div class="header--mobile-menuItem-right"></div>
+                </div>
+            </a>
+            <!-- <a href="/business.html" class="header--mobile-menuItem"> -->
+            <a href="/business.php" class="header--mobile-menuItem beta--showToastPopup">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><span class="material-symbols-outlined">category</span><p>LINC3.0 사업단</p></div>
+                    <div class="header--mobile-menuItem-right"></div>
+                </div>
+            </a>
+            <div class="header--mobile-menuItem header--mobile-menuItem-list">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><span class="material-symbols-outlined">newspaper</span><p>소식 모아보기</p></div>
+                    <div class="header--mobile-menuItem-right"><span class="material-symbols-outlined">expand_more</span></div>
+                </div>
+                <div class="header--mobile-menuItem-links">
+                    <!-- <a href="/news.html">소식 모아보기</a>
+                    <a href="/news02.html">행사 모아보기</a> -->
+                    <a href="/news.php">소식 모아보기</a>
+                    <a href="/news02.php">행사 모아보기</a>
+                </div>
+            </div>
+            <!-- <a href="/event.html" class="header--mobile-menuItem"> -->
+            <a href="/bbs/board.php?bo_table=event" class="header--mobile-menuItem">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><span class="material-symbols-outlined">celebration</span><p>이벤트</p></div>
+                    <div class="header--mobile-menuItem-right"></div>
+                </div>
+            </a>
+            <a href="/bbs/board.php?bo_table=calender" class="header--mobile-menuItem">
+                <div class="header--mobile-menuItem-title">
+                    <div class="header--mobile-menuItem-left"><span class="material-symbols-outlined">calendar_month</span><p>편성표</p></div>
+                    <div class="header--mobile-menuItem-right"></div>
+                </div>
+            </a>
+            <div class="header--mobile-menu-goLink">
+                <a href="https://linctv.or.kr/lincInc/linc_contents.php" target="blank">링크+TV 다시보기</a>
+            </div>
+            <!-- <div class="header--mobile-menu-personal">개인정보처리방침</div> -->
+        </div>
+    </div>
+    <div class="header--ToastPopup">
+        <p>추후 공개될 예정입니다! 🤗</p>
+    </div>
+</div>
+<script>
+    function searchPopOpen(){
+        $(".header--searchPopup").addClass("show")
+        $(".header--searchBg").removeClass("cleaner")
+        $(".header--searchBg").addClass("show")
+        $("body").addClass("hidden")
+    }
+    function searchPopClose(){
+        $(".header--searchPopup").removeClass("show")
+        $(".header--searchBg").removeClass("show")
+        $(".header--searchBg").addClass("cleaner")
+        $("body").removeClass("hidden")
+    }
+    function hamPopOpen(){
+        $(".header--mobile-menu").addClass("show")
+        $("body").addClass("hidden")
+    }
+    function hamPopClose(){
+        $(".header--mobile-menu").removeClass("show")
+        $("body").removeClass("hidden")
+    }
+    function memberPopOpen(){
+            $("#isMember").addClass("open")
+            $(".isMemberExpand").text("expand_less")
+            $("body").addClass("hidden-atMobile")
+            $("body").addClass("hidden")
+            $(".header--searchBg").addClass("show")
+            $(".header--searchBg").addClass("cleaner")
+    }
+    function memberPopClose(){
+        $("#isMember").removeClass("open")
+            $(".isMemberExpand").text("expand_more")
+            $("body").removeClass("hidden-atMobile")
+            $("body").removeClass("hidden")
+            $(".header--searchBg").removeClass("show")
+            $(".header--searchBg").removeClass("cleaner")
+    }
+    function memberPopSwitch(){
+        if($("#isMember").hasClass("open")){
+            memberPopClose()
+        } else {
+            searchPopClose()
+            hamPopClose()
+            memberPopOpen()
+        }
+    }
+    $("#headerSearchButton").click(function(){
+        memberPopClose()
+        hamPopClose()
+        searchPopOpen()
+    })
+    $("#headerSearchClose").click(function(){
+        searchPopClose()
+    })
+    $(".header--searchBg").click(function(){
+        searchPopClose()
+        memberPopClose()
+    })
+    $("#headerSearchHam").click(function(){
+        searchPopClose()
+        memberPopClose()
+        hamPopOpen()
+    })
+    $(".header--mobile-menu-bg").click(function(){
+        hamPopClose()
+    })
+
+    $("#isMember .header--tools-isMember-icon").click(function(){
+        memberPopSwitch()
+    })
+    $("#isMember > span").click(function(){
+        memberPopSwitch()
+    })
+    $(".header--member-popup-bg").click(function(){
+        memberPopClose()
+    })
+    $(".header--mobile-menuItem-list").click(function(){
+        if($(this).hasClass("show")){
+            $(this).removeClass("show")
+            $(this).find(".header--mobile-menuItem-right .material-symbols-outlined").text("expand_more")
+            $(this).find(".header--mobile-menuItem-links").removeClass("show")
+        } else {
+            $(this).addClass("show")
+            $(this).find(".header--mobile-menuItem-right .material-symbols-outlined").text("expand_less")
+            $(this).find(".header--mobile-menuItem-links").addClass("show")
+        }
+    })
+    var setTimeTimer = 2000;
+    var setTime = setTimeout(toastPopupClose,setTimeTimer)
+    function toastPopupClose(){
+        $(".header--ToastPopup").removeClass("active")
+    }
+    $(".beta--showToastPopup").click(function(){
+        $(".header--ToastPopup").addClass("active")
+        clearTimeout(setTime)
+        setTime = setTimeout(toastPopupClose,setTimeTimer)
+    })
+</script>

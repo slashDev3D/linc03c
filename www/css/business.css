@@ -1,0 +1,82 @@
+.bs--container{padding-top: 52px;}
+.bs--title{margin-top: 14px;}
+.bs--title-text01{font-size: 40px;font-weight: 700;line-height: 1;}
+.bs--title-text02{font-size: 16px;color: #666;margin-top: 1.75em;line-height: 1;}
+
+.bs--sortList{display: flex;margin-top: 60px;}
+.bs--sortList-item{font-size: 15px;font-weight: 700;padding: 14px 16px;border-radius: 4px;background-color: #f8f8f8;color: #666666;cursor: pointer;}
+.bs--sortList-item:not(:last-child){margin-right: 6px;}
+.bs--sortList-item.on{color: #fff;background-color: #2f3440;}
+
+.bs--contents{padding-top: 40px;margin-top: 28px;margin-bottom:80px;border-top: 1px solid #dddddd;display: flex;justify-content: space-between;overflow: hidden;position: relative;}
+.bs--figure:first-child{width: calc(40% - 20px);max-width: 411px;margin-right: 20px;}
+.bs--figure:last-child{width: 60%;overflow-y: hidden;height: 100%;position: absolute;right: 0;top: 0;padding-top: 40px;}
+.bs--figure:last-child .bs--schoolList{overflow-y: scroll;height: 100%;}
+.bs--figure:last-child .bs--schoolList::-webkit-scrollbar{background-color: #eee;border-radius: 10px;width: 8px;}
+.bs--figure:last-child .bs--schoolList::-webkit-scrollbar-thumb{background-color: #aaa;border-radius: 10px;}
+.bs--map{position: relative;margin-top: 36px;}
+.bs--map-title{font-size: 14px;color: #526c87;line-height: 1.8;word-break: keep-all;}
+.bs--map-none{width:100%;position: relative;}
+.bs--map-hover{position: absolute;width: 100%;height: 100%;top: 0;pointer-events: none;}
+.map--svg{width: 100%;}
+.map--svg #mapNoneG2{position: relative;}
+.map--svg .cls-1{fill: #f7f7f7;stroke: #fff; stroke-miterlimit: 10;cursor: pointer;}
+.map--svg .cls-2{fill:#666;pointer-events: none;}
+.map--area-svg,
+.map--area-svgText{transition-duration: 0.3s;opacity: 1;}
+.map--area-svg.hover,
+.map--area-svgText.hover{opacity: 0;}
+.map--area-svg.on,
+.map--area-svgText.on{opacity: 0;}
+
+.bs--schoolList{display: flex;flex-wrap: wrap;gap: 20px 8px;}
+.bs--schoolItem{width: calc(100%/3 - 24px/3);display: block;}
+
+.bs--schoolItem-thumb{padding: 30px 10px;border-radius: 6px;border: 1px solid #ededed;display: flex;align-items: center;justify-content: center;}
+.bs--schoolItem-thumb img{display: block;max-width: 100%;}
+.bs--schoolItem-text{margin-top: 16px;display: flex;flex-direction: column;align-items: center;text-align: center;}
+.bs--schoolItem-text01{font-size: 16px;font-weight: 700;margin-bottom: 12px;}
+.bs--schoolItem-text02{font-size: 12px;color: #697289;border-radius: 4px;background-color: #eee;padding: 5px 7px;}
+
+.bs--schoolList-goBack{font-size: 16px;color: #697289;font-weight: 700;margin-bottom: 1.5em;display: none;}
+.bs--schoolList-goBack-button{cursor: pointer;display: none;align-items: center;align-items: center;}
+.bs--schoolList-goBack-button .material-symbols-outlined{font-size: 16px;margin-right: 4px;}
+
+@media all and (max-width:1025px){
+    .bs--schoolItem{width: calc(50% - 12px);}
+
+    .bs--figure:first-child{width: calc(50% - 5px);max-width: unset;margin-right: 10px;}
+    .bs--figure:last-child{width: calc(50% - 5px);}
+
+    .bs--title-text01{font-size: 32px;}
+}
+@media all and (max-width:768px){
+    .bs--schoolList-goBack{display: flex;}
+    .bs--figure:last-child .bs--schoolList{height: calc(100% - 44px);}
+    .bs--container{padding-top:40px}
+    .bs--contents{width: 100%;display: -webkit-box;}
+    .bs--figure:first-child{width: 100%;margin-right: 0px;padding: 0 40px;}
+    .bs--figure:last-child{width: 100%;transform: translate(100%,0);}
+    .bs--map{margin-top: 24px;}
+
+    .bs--contents{margin-top: 20px;padding-top: 28px;}
+    .bs--figure{transition-duration: 0.3s;}
+    .bs--figure:first-child.toLeft{transform:translate(-100%,0);transition-delay: 0.3s;}
+    .bs--figure:last-child.toLeft{transform:translate(0%,0);transition-delay: 0.3s;}
+    .bs--schoolList-goBack-button{display: flex;}
+
+    .bs--title-text01{font-size: 24px;}
+    .bs--title-text02{font-size: 14px;}
+    .bs--sortList{flex-wrap: wrap;margin-top: 40px;}
+    .bs--sortList-item{font-size: 14px;padding: 10px 12px;margin-bottom: 6px;}
+}
+@media all and (max-width:481px){
+    .bs--figure:first-child{padding: 0 20px;}
+
+    .bs--title-text01{font-size: 20px;}
+    .bs--schoolItem-thumb{padding: 14px 4px;}
+    .bs--sortList-item{padding: 8px 10px;font-size: 13px;}
+}
+
+.bs--schoolItem-thumb2{padding: 10px;position: relative;}
+.bs--schoolItem-thumbImg{padding-top: 50%;background-size: contain;background-position: center center;width: 100%;background-repeat: no-repeat;}

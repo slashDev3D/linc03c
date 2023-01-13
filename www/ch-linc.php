@@ -1,0 +1,231 @@
+<?
+include_once('./_common.php');
+define('_INDEX_', true);
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
+
+$data_visit = "1";
+
+include_once(G5_PATH.'/head2.php');
+
+add_stylesheet('<link rel="stylesheet" href="/css/cnlinc3.css">', 0);
+?>
+    <div class="public--container" data-sub="show">
+        <div class="relative">
+            <div class="public--padding">
+                <div class="s1">
+                    <div class="s1--title">
+                        <p>LINC3.0 사업이 만드는 긍정적인 변화들</p>
+                        <p>LINC 구성원들의 진솔한 이야기</p>
+                        <p>지금 시작합니다.</p>
+                    </div>
+                    <div class="s1--props">
+                        <p class="s1--props01">채널 링크3.0</p>
+                        <p class="s1--props02">똑똑 위클리</p>
+                        <p class="s1--props03">링크 어워드</p>
+                        <p class="s1--props04">링크 컴퍼니</p>
+                        <p class="s1--props01">···</p>
+                    </div>
+                    <div class="s1--goLink">
+                        <a href="https://www.youtube.com/@CHANNEL_LINC3.0" target="_blank">채널 링크3.0 바로가기</a>
+                    </div>
+                    <div class="s1--cards">
+                            <div class="s1--cardsWrap">
+                                <div class="s1--cardItem" data-gap="3">
+                                    <div class="s1--cardItem-bg">
+                                        <img src="./img/chlinc3_01.png" alt="">
+                                    </div>
+                                    <div class="s1--cardItem-cont">
+                                        <div class="s1--cardItem-cont-img"><img src="./img/chlinc3_01_sub.png" alt=""></div>
+                                        <div class="s1--cardItem-cont-text01">LINC 구성원들의 진솔한 이야기</div>
+                                        <div class="s1--cardItem-cont-text02">#채널링크3.0</div>
+                                    </div>
+                                </div>
+                                <div class="s1--cardItem" data-gap="2">
+                                    <div class="s1--cardItem-bg">
+                                        <img src="./img/chlinc3_02.png" alt="">
+                                    </div>
+                                    <div class="s1--cardItem-cont">
+                                        <div class="s1--cardItem-cont-img"><img src="./img/chlinc3_02_sub.png" alt=""></div>
+                                        <div class="s1--cardItem-cont-text01">LINC3.0 사업 핵심 이슈</div>
+                                        <div class="s1--cardItem-cont-text02">#똑똑위클리</div>
+                                    </div>
+                                </div>
+                                <div class="s1--cardItem" data-gap="2">
+                                    <div class="s1--cardItem-bg">
+                                        <img src="./img/chlinc3_03.png" alt="">
+                                    </div>
+                                    <div class="s1--cardItem-cont">
+                                        <div class="s1--cardItem-cont-img"><img src="./img/chlinc3_01_sub.png" alt=""></div>
+                                        <div class="s1--cardItem-cont-text01">LINC3.0 사업이 만드는 <br>긍정적인 변화들</div>
+                                        <div class="s1--cardItem-cont-text02">#채널링크3.0</div>
+                                    </div>
+                                </div>
+                                <div class="s1--cardItem" data-gap="3">
+                                    <div class="s1--cardItem-bg">
+                                        <img src="./img/chlinc3_04.png" alt="">
+                                    </div>
+                                    <div class="s1--cardItem-cont">
+                                        <div class="s1--cardItem-cont-img"><img src="./img/chlinc3_04_sub.png" alt=""></div>
+                                        <div class="s1--cardItem-cont-text01">학생들이 직접 만드는 광고 이야기</div>
+                                        <div class="s1--cardItem-cont-text02">#링크컴퍼니</div>
+                                    </div>
+                                </div>
+                                <div class="s1--cardItem" data-gap="3">
+                                    <div class="s1--cardItem-bg">
+                                        <img src="./img/chlinc3_05.png" alt="">
+                                    </div>
+                                    <div class="s1--cardItem-cont">
+                                        <div class="s1--cardItem-cont-img"><img src="./img/chlinc3_05_sub.png" alt=""></div>
+                                        <div class="s1--cardItem-cont-text01">그들이 전해주는 진솔한 이야기</div>
+                                        <div class="s1--cardItem-cont-text02">#링크어워드</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s1--cardsBg"></div>
+                    </div>
+                    <div class="s1--cards-mobile">
+                        <img src="./img/chlinc3_cards_mobile.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="s3">
+                <div class="s3--cont">
+                    <div class="s3--title"><p>LINC3.0</p><p>콘텐츠👀들을 소개합니다.</p></div>
+                    <div class="public--wrap">
+                        <div class="s3--cards">
+                            <div class="s3--cardItem">
+                                <div class="s3--cardItem-thumb">
+                                    <div class="s3--cardItem-thumbImg"></div>
+                                    <div class="s3--cardItem-thumbIcon"><img src="./img/chlinc3_logo01.png" alt=""></div>
+                                </div>
+                                <div class="s3--cardItem-text">
+                                    <div class="s3--cardItem-textBox">
+                                        <div class="s3--cardItem-text01">✅&nbsp;똑똑 위클리</div>
+                                        <div class="s3--cardItem-text02">성과 공유형 코너</div>
+                                        <div class="s3--cardItem-text03">산학연협력 지속가능성 및 <br>제도개선을 통한 교육과정 소개</div>
+                                    </div>
+                                    <a href="./list01.html">보러가기</a>
+                                </div>
+                            </div>
+                            <div class="s3--cardItem">
+                                <div class="s3--cardItem-thumb">
+                                    <div class="s3--cardItem-thumbImg"></div>
+                                    <div class="s3--cardItem-thumbIcon"><img src="./img/chlinc3_logo02.png" alt=""></div>
+                                </div>
+                                <div class="s3--cardItem-text">
+                                    <div class="s3--cardItem-textBox">
+                                        <div class="s3--cardItem-text01">✅&nbsp;링크 컴퍼니</div>
+                                        <div class="s3--cardItem-text02">산학연협력 생태계 강조형 코너</div>
+                                        <div class="s3--cardItem-text03">미래 인재 양성을 보여주는 <br>체게화된 산학연협력 프로그램 소개</div>
+                                    </div>
+                                    <a href="./list02.html">보러가기</a>
+                                </div>
+                            </div>
+                            <div class="s3--cardItem">
+                                <div class="s3--cardItem-thumb">
+                                    <div class="s3--cardItem-thumbImg"></div>
+                                    <div class="s3--cardItem-thumbIcon"><img src="./img/chlinc3_logo03.png" alt=""></div>
+                                </div>
+                                <div class="s3--cardItem-text">
+                                    <div class="s3--cardItem-textBox">
+                                        <div class="s3--cardItem-text01">✅&nbsp;링크 어워드</div>
+                                        <div class="s3--cardItem-text02">학생 ‧ 기업 연계활동형 코너</div>
+                                        <div class="s3--cardItem-text03">함께 성장하는 공유, 협업의 생태계를 <br>직접적으로 소개하는 콘텐츠</div>
+                                    </div>
+                                    <a href="./list03.html">보러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s4">
+                <div class="s4--wrap public--wrap">
+                    <div class="s4--info">
+                        <div class="s4--info01">📹&nbsp;LINC3.0 티저영상</div>
+                        <div class="s4--info02">
+                            <p class="s4--info02-item on">똑똑 위클리 티저</p>
+                            <p class="s4--info02-item">링크 컴퍼니 티저</p>
+                            <p class="s4--info02-item">링크 어워드 티저</p>
+                        </div>
+                        <div class="s4--info03">
+                            <p class="s4--info03-item on">#LINC3.0 #똑똑 위클리</p>
+                            <p class="s4--info03-item">#LINC3.0 #링크 컴퍼니</p>
+                            <p class="s4--info03-item">#LINC3.0 #링크 어워드</p>
+                        </div>
+                        <div class="s4--info04">
+                            <div class="s4--info04-item on"><img src="./img/chlinc3_logo01.png" alt=""></div>
+                            <div class="s4--info04-item"><img src="./img/chlinc3_logo02.png" alt=""></div>
+                            <div class="s4--info04-item"><img src="./img/chlinc3_logo03.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="s4--video">
+                        <div class="s4--video-wrap">
+                            <div class="s4--video-contents on">
+                                <iframe id="teaser01" src="https://www.youtube.com/embed/KDAtL7HDEec?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <!-- <div class="s4--video-contents" style="background-image:url(./img/chlinc03_s4_company.jpg)"></div> -->
+                            <div class="s4--video-contents">
+                                <iframe id="teaser02" src="https://www.youtube.com/embed/fZpAUlWpuog?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="s4--video-contents">
+                                <iframe id="teaser03" src="https://www.youtube.com/embed/7NS6lSvzgwo?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <!-- <div class="s4--video-contents" style="background-image:url(./img/chlinc03_s4_award.jpg)"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s2">
+                <div class="s2--belt">
+                    <div class="s2--beltItem s2--beltItem01">
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                    </div>
+                    <div class="s2--beltItem s2--beltItem02">
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                        <p>LINC3.0</p>
+                    </div>
+                </div>
+                <div class="s2--cont">
+                    <div class="s2--title">
+                        <div class="s2--title-text01"><span>새로워진 LINC3.0</span><br><span class="specialBlue">채널 링크3.0<img src="./img/chlinc3_blueline.png"></span><span>에서 만나보세요!👋</span></div>
+                        <div class="s2--title-text02">링크를 통해 새롭게 확장되는 기업과 학교, <br>대학의 이야기를 들려드립니다</div>
+                    </div>
+                    <div class="s2--char">
+                        <div class="s2--charImg"><img src="./img/chlinc3_people.png" alt=""></div>
+                        <div class="s2--textBox s2--textBox01">
+                            <div class="s2--textBox-text01"><p>개그맨 이상준</p></div>
+                            <div class="s2--textBox-text02"><p>링크 컴퍼니</p><span></span><p>메인 MC</p></div>
+                        </div>
+                        <div class="s2--textBox s2--textBox02">
+                            <div class="s2--textBox-text01"><p>개그맨 서경석</p></div>
+                            <div class="s2--textBox-text02"><p>똑똑 위클리</p><span></span><p>메인 MC</p></div>
+                        </div>
+                        <div class="s2--textBox s2--textBox03">
+                            <div class="s2--textBox-text01"><p>유튜버 해지대지</p></div>
+                            <div class="s2--textBox-text02"><p>링크 컴퍼니</p><span></span><p>메인 MC</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s3--goLink hide">
+                <a href="https://www.youtube.com/@CHANNEL_LINC3.0" target="blank">👉 채널 링크3.0 바로가기</a>
+            </div>
+        </div>
+    </div>
+<?php
+
+include_once(G5_PATH.'/tail2.php');
+?>
+<script src="/js/cnlinc3.js"></script>

@@ -1,0 +1,8 @@
+{
+    "platform": {
+        "php": "7.1.0"
+    },
+    "require": {
+        "vimeo/vimeo-api": "2.0"
+    }
+}

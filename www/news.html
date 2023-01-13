@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크티비</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/news.css">
+</head>
+<body>
+    <div class="public--container" data-sub="">
+        <div class="list-contents">
+            <div class="public--wrap">
+                <div class="public--where">
+                    <div class="public--where-before">
+                        <a href="/">Home<span class="material-symbols-outlined">navigate_next</span></a>
+                    </div>
+                    <div class="public--where-now">
+                        <a href="">소식 모아보기</a>
+                    </div>
+                </div>
+                <div class="board--title">
+                    <div class="board--title-text01">소식 모아보기</div>
+                    <div class="board--title-text02">채널 링크3.0 소식들을 만나보세요.</div>
+                </div>
+                <div class="board--otherLink">
+                    <a class="on" href="">소식지</a>
+                    <a href="/news02.html">행사안내</a>
+                </div>
+                <div class="board--list-wrap">
+                    <div class="board--sort">
+                        <!-- 
+                            각 옵션은 소식지의 옵션값들이 나타납니다(취업, 창업 ...)
+                            (첫 번 째 옵션은 전체를 출력해주는 옵션입니다.)
+                            각 버튼 클릭 시 해당 옵션값으로 재정렬되도록 부탁드립니다.
+                         -->
+                        <div class="board--sort-option on">전체</div>
+                        <div class="board--sort-option">취업</div>
+                        <div class="board--sort-option">창업</div>
+                    </div>
+                    <div class="board--list">
+    
+                        <!-- 
+                            board--listItem2 의 요소에 아이템정보가 담기도록 부탁드립니다.
+                            참고 : 최대 출력 수는 페이지 당 12개 입니다.
+                        -->
+    
+                        <div class="board--listItem2">
+                            <!-- board--listItem-thumb 클릭 시 해당 이벤트 글로 이동 부탁드립니다.-->
+                            <div class="board--listItem-thumb">
+                                <div class="board--listItem-thumbImg2" style="background-image:url(이미지 경로)"></div>
+                            </div>
+                            <div class="board--listItem-text">
+                                <div class="board--listItem-text04">{#소식지태그}</div>
+                                <div class="board--listItem-text03">{소식지 제목 영역}</div>
+                                <div class="board--listItem-text02">
+                                    <span class="material-symbols-outlined">schedule</span><p>YYYY.MM.DD</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="board--index">
+                    <div class="board--index-wrap">
+                        <!-- 
+                            더블 애로우는 각각 맨 끝, 맨 시작으로 페이지 이동 부탁드립니다.
+                            최초 이 페이지 방문 시,  keyboard_double_arrow_left와 keyboard_arrow_left는 출력되지 않습니다.
+                            마지막 인덱스를 볼 시,  keyboard_double_arrow_right와 keyboard_arrow_right는 출력되지 않습니다.
+                            아래의 숫자 인덱스는 예시이며 방문중인 인덱스 소속의 board--index-button에는 "on"클래스가 부여되어야 합니다.
+                        -->
+                        <div class="board--index-button"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></div>
+                        <div class="board--index-button"><span class="material-symbols-outlined">keyboard_arrow_left</span></div>
+                        <div class="board--index-button on"><span>1</span></div>
+                        <div class="board--index-button"><span>2</span></div>
+                        <div class="board--index-button"><span>3</span></div>
+                        <div class="board--index-button"><span>4</span></div>
+                        <div class="board--index-button"><span>5</span></div>
+                        <div class="board--index-button"><span class="material-symbols-outlined">keyboard_arrow_right</span></div>
+                        <div class="board--index-button"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header" class="headerComponent" data-visit="4" data-sub-visit="0"></div>
+    <div id="footer" class="footerComponent"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/component.js"></script>
+    <script src="./js/event.js"></script>
+</body>
+</html>

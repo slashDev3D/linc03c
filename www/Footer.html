@@ -1,0 +1,87 @@
+<div class="footer--container">
+    <div class="public--wrap">
+        <div class="footer--notice">
+            <div class="footer--newsletter">NEWS LETTER</div>
+            <div class="footer--noticeSwiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- 공지사항 글 인 경우 이 요소를 출력해주세요. -->
+                        <div>
+                            <p class="noticeSwiper--notice">공지사항</p>
+                            <p class="noticeSwiper--title">{제목이들어가는영역입니다}</p>
+                        </div>
+                        <p class="noticeSwiper--date">{YYYY.MM.DD}</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 공지사항 글 인 경우 이 요소를 출력해주세요. -->
+                        <div>
+                            <p class="noticeSwiper--notice">공지사항</p>
+                            <p class="noticeSwiper--title">{제목이들어가는영역입니다222}</p>
+                        </div>
+                        <p class="noticeSwiper--date">{YYYY.MM.DD}</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- 공지사항 글 인 경우 이 요소를 출력해주세요. -->
+                        <div>
+                            <p class="noticeSwiper--notice">공지사항</p>
+                            <p class="noticeSwiper--title">{제목이들어가는영역입니다333}</p>
+                        </div>
+                        <p class="noticeSwiper--date">{YYYY.MM.DD}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="noticeSwiper--button">
+                <div class="noticeSwiper--prev"><span class="material-symbols-outlined">navigate_before</span></div>
+                <div class="noticeSwiper--next"><span class="material-symbols-outlined">navigate_before</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer--contents">
+        <div class="public--wrap">
+            <div class="footer--row">
+                <div class="footer--logo">채널 링크3.0</div>
+                <div class="footer--sns">
+                    <a target="blank" href="https://www.facebook.com/chlinc3.0"><img src="/img/foot_icon_facebook.png" alt=""></a>
+                    <a target="blank" href="https://www.instagram.com/ch_linc3.0/"><img src="/img/foot_icon_insta.png" alt=""></a>
+                    <a target="blank" href="https://www.youtube.com/channel/UCLXFkJr1mEY-ZUxym7__bZw"><img src="/img/foot_icon_youtube.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer--row">
+                <div class="footer--row-prodInfo">
+                    <p>회사명 : 주식회사 몽규</p>
+                    <p>대표명 : 박성호</p>
+                    <p>주소 : 서울특별시 마포구 성미산로 103 연남동</p>
+                    <p>사업자등록번호 : 865-86-01676</p>
+                    <p>연락처 : 02-3144-2325</p>
+                    <p>이메일 : lincplustv@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer--row">
+                <div class="footer--text">
+                    <!-- <div id="footPersonal" class="footer--text01">개인정보처리방침</div> -->
+                    <div class="footer--text02">COPYRIGHT (C) 2022 채널링크3.0. ALL RIGHTS RESERVED.</div>
+                </div>
+                <div class="footer--company">
+                    <div class="footer--companyItem"><img src="/img/orglogo01.png" alt=""></div>
+                    <div class="footer--companyItem"><img src="/img/orglogo02.png" alt=""></div>
+                    <div class="footer--companyItem"><img src="/img/orglogo03.png" alt=""></div>
+                    <div class="footer--companyItem"><img src="/img/orglogo04.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var footerNoticeSwiper = new Swiper('.footer--noticeSwiper', {
+    speed: 1,
+    allowTouchMove: false,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.noticeSwiper--next',
+        prevEl: '.noticeSwiper--prev',
+    },
+});
+</script>
